@@ -68,6 +68,121 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: ""
+    name: New Event Stream
+    meta:
+      id: req_c66b92a756324fe2a55555b78ec44f94
+      created: 1762690548785
+      modified: 1762690606566
+      isPrivate: false
+      description: ""
+      sortKey: -1762690548785
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.0.0
+      - name: Accept
+        value: text/event-stream
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.Localhost }}auth/forgot-password"
+    name: Forgot Password
+    meta:
+      id: req_3ae7e6a44bb74e36b7b75fd6d4d46c92
+      created: 1762690551395
+      modified: 1762691052728
+      isPrivate: false
+      description: ""
+      sortKey: -1762690551395
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "alderamemi@gmail.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.Localhost }}auth/verify-email"
+    name: Verify Email
+    meta:
+      id: req_8b96edf462df4820bd9600a84a8ff65f
+      created: 1762690553637
+      modified: 1762691196601
+      isPrivate: false
+      description: ""
+      sortKey: -1762690553637
+    method: GET
+    parameters:
+      - id: pair_44a988197fee47bfb39aa74ffee69e43
+        name: token
+        value: 3cab1fab187c4b61ec948020ac1d9ae4a5b4c3bf123e0336bc51a7491ff4e133
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.Localhost }}auth/reset-password"
+    name: Reset Password
+    meta:
+      id: req_282094431b3b4bbeb801ebcef0cb9dc4
+      created: 1762691098246
+      modified: 1762691253222
+      isPrivate: false
+      description: ""
+      sortKey: -1762691098246
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"token": "510765b5d9b55e3d5c74c3ea890443c79bdcd4e56892bac1ce9a3c45e576bbd9",
+        	"newPassword": "otaku12332"
+        }
+    parameters:
+      - id: pair_4be66dc3b8cb437ea4064b2243bbd4dd
+        name: token
+        value: 510765b5d9b55e3d5c74c3ea890443c79bdcd4e56892bac1ce9a3c45e576bbd9
+        description: ""
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
