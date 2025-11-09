@@ -1,0 +1,85 @@
+type: collection.insomnia.rest/5.0
+name: API V1
+meta:
+  id: wrk_7bec32ebfc354c79bdba4dd9e078de12
+  created: 1762680151919
+  modified: 1762680162358
+  description: ""
+collection:
+  - url: "{{ _.Localhost }}auth/register"
+    name: Register
+    meta:
+      id: req_b48b8ce8f4e2414e818820b06a62a12a
+      created: 1762680151943
+      modified: 1762680934651
+      isPrivate: false
+      description: ""
+      sortKey: -1762680151943
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "alderamemi@gmail.com",
+        	"username": "kiminodare",
+        	"password": "otaku12332",
+        	"name": "Kimi"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.Localhost }}auth/login"
+    name: Login
+    meta:
+      id: req_cff3cb9b894a42fe8edfbc05e96b9a5f
+      created: 1762680173686
+      modified: 1762685023595
+      isPrivate: false
+      description: ""
+      sortKey: -1762680173686
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"identifier": "kiminodare",
+        	"password": "otaku12332"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_44b40101f0b745a4919ebc0aa752c50904ece971
+    created: 1762680151930
+    modified: 1762680151930
+environments:
+  name: Base Environment
+  meta:
+    id: env_44b40101f0b745a4919ebc0aa752c50904ece971
+    created: 1762680151927
+    modified: 1762680445505
+    isPrivate: false
+  data:
+    Localhost: http://localhost:9000/
